@@ -60,7 +60,7 @@ public class HomeController {
 		return new ResponseEntity<String>("Animal with ID:" + animal.getId() +" has been updated", headers, HttpStatus.OK);
 	}
 	
-	@RequestMapping(value = "/remove/{id}",headers="Content-Type=application/json", method = RequestMethod.DELETE)
+	@RequestMapping(value = "/remove/{id}",produces="application/json", method = RequestMethod.DELETE)
 	public ResponseEntity<String> remove(@PathVariable int id) {
 		MultiValueMap<String, String> headers = new HttpHeaders();
 		headers.add(HttpHeaders.CONTENT_TYPE, MediaType.APPLICATION_JSON.toString());
@@ -74,7 +74,7 @@ public class HomeController {
 		return new ResponseEntity<String>("Animal with ID:" + animal.getId() +" has been removed", headers, HttpStatus.OK);
 	}
 	
-	@RequestMapping(value="/animals", produces= "application/json")
+	@RequestMapping(value="/animals", produces= "application/json", method = RequestMethod.GET)
 	public ResponseEntity<String> animals() {
 		
 		String json = parseObjectToString(animalService.getAnimals());

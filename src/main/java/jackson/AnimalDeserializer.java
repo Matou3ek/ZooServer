@@ -25,10 +25,12 @@ public class AnimalDeserializer extends StdDeserializer<Animal> {
 		public Animal deserialize(JsonParser arg0, DeserializationContext arg1)
 				throws IOException, JsonProcessingException {
 			JsonNode node = arg0.getCodec().readTree(arg0);
+			
 			Animal animal = new Animal();
+			int id = node.get("id").asInt();
 	        String name = node.get("name").asText();
 			animal.setName(name);
-
+			animal.setId(id);
 	        return animal;
 		}
 
