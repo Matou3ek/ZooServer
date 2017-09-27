@@ -35,4 +35,4 @@ Java 1.7+
 
 
 ## Installation
-copy ZooServer(zoo-1.0.0-BUILD-SNAPSHOT).war to <tomcat>/webapps folder
+copy war file from ZooServer/target/zoo-1.0.0-BUILD-SNAPSHOT/zoo-1.0.0-BUILD-SNAPSHOT.war to <tomcat>/webapps folder as zoo.war
