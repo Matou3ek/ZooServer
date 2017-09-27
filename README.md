@@ -35,4 +35,5 @@ Java 1.7+
 
 
 ## Installation
+Run tomcat server on port 8080
 copy war file from ZooServer/target/zoo-1.0.0-BUILD-SNAPSHOT/zoo-1.0.0-BUILD-SNAPSHOT.war to <tomcat>/webapps folder as zoo.war
